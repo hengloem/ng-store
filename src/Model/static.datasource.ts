@@ -5,13 +5,14 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class StaticDataSource {
     private products: Product[] = [
-        new Product(1, "Baby", "Cat01", "plan, etc.", 1000),
-        new Product(2, "T-shirt", "Cat01", "Beer", 200),
-        new Product(3, "Trouser", "Cat01", "Beer", 200),
-        new Product(4, "Cupple", "Cat01", "Sand", 20),
-        new Product(5, "Sandwitch", "Cat01", "Sand", 50),
-        new Product(6, "Cupple", "Cat01", "Sand", 2),
-        new Product(7, "Soy Soy", "Cat04", "Sand", 2)
+        new Product(1, "a", "Cat01", "text 1", 10),
+        new Product(2, "b", "Cat01", "text 1", 10),
+        new Product(3, "c", "Cat02", "text 2", 20),
+        new Product(4, "d", "Cat02", "text 2", 20),
+        new Product(5, "e", "Cat03", "text 3", 30),
+        new Product(6, "f", "Cat03", "text 3", 30),
+        new Product(7, "g", "Cat04", "text 4", 40),
+        new Product(8, "h", "Cat04", "text 4", 40)
     ];
 
     getProducts() : Observable<Product[]> {
