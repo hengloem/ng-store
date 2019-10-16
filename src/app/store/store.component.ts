@@ -8,18 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./store.component.css']
 })
 export class StoreComponent implements OnInit {
-
+  private selectedCategory : string;
+  
   constructor(private repository: ProductRepository) { }
 
   ngOnInit() {
   }
 
-  get products() : Product[] {
-    return this.repository.getProducts();
+  get products(): Product[] {
+    return this.repository.getProducts(this.selectedCategory);
   }
 
-  get categories() : string[] {
+  get categories(): string[] {
     return this.repository.getCategories();
+  }
+
+  changeCategory (newCategory? : string) {
+    this.selectedCategory = newCategory;
   }
 
 }
