@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 export class Cart {
     // Attributes
     public Lines: CartLine[] = [];
-    public itmeCount: number = 0;
+    public itemCount: number = 0;
     public cartPrice: number = 0;
 
     // Methods
@@ -37,16 +37,16 @@ export class Cart {
 
     clear() {
         this.Lines = [];
-        this.itmeCount = 0;
+        this.itemCount = 0;
         this.cartPrice = 0;
     }
 
     // Encapsulation
     private recalculate() {
-        this.itmeCount = 0;
+        this.itemCount = 0;
         this.cartPrice = 0;
         this.Lines.forEach(i => {
-            this.itmeCount  += i.quantity;
+            this.itemCount  += i.quantity;
             this.cartPrice += (i.quantity * i.product.price);
         })
     }
