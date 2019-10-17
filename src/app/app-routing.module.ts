@@ -1,4 +1,4 @@
-import { StoreFirstGuard } from './store/storefirst.guard';
+import { StoreFirstGuard } from './storefirst.guard';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartDetailsComponent } from './cart-details/cart-details.component';
 import { BrowserModule } from '@angular/platform-browser';
