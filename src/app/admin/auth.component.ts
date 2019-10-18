@@ -19,13 +19,14 @@ export class AuthComponent {
         if(form.valid) {
             this.auth.authenticate(this.username, this.password)
             .subscribe(response => {
+                console.log(response);
                 if(response){
                     this.router.navigateByUrl("/admin/main")
                 }
                 this.errorMessage = "Authentication fail."
             });
         }else{
-            this.errorMessage = "Form Data Invalid.";
+            this.errorMessage = "Please fill all required.";
         }
     }
 }
